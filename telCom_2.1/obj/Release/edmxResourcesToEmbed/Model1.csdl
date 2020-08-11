@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="telComModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Balance1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientId" Type="Int32" />
+    <Property Name="DateEvent" Type="DateTime" Precision="3" />
+    <Property Name="Summa" Type="Double" />
+    <Property Name="TextEvent" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Call1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityFromId" Type="Int32" />
+    <Property Name="CityToId" Type="Int32" />
+    <Property Name="ClientId" Type="Int32" />
+    <Property Name="CostCall" Type="Double" />
+    <Property Name="DateStartCall" Type="DateTime" Precision="3" />
+    <Property Name="DateEndCall" Type="DateTime" Precision="3" />
+    <Property Name="Duration" Type="Int32" />
+  </EntityType>
+  <EntityType Name="City1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Client1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Balance" Type="Double" Nullable="false" />
+    <Property Name="LegalEntityId" Type="Int32" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TariffId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ElementsTariff1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TariffId" Type="Int32" />
+    <Property Name="CityFromId" Type="Int32" />
+    <Property Name="CityToId" Type="Int32" />
+    <Property Name="CostCall" Type="Double" />
+  </EntityType>
+  <EntityType Name="HistoryTariff1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TariffId" Type="Int32" />
+    <Property Name="ClientId" Type="Int32" />
+    <Property Name="ChangeDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="LegalEntity1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddressCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Bik" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Inn" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CoressAccount" Type="Int32" />
+    <Property Name="FaceCharge" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Person1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Tariff1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="TimeOfDay" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Worker1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccessCode" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="telComEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Balance1" EntityType="Self.Balance1" />
+    <EntitySet Name="Call1" EntityType="Self.Call1" />
+    <EntitySet Name="City1" EntityType="Self.City1" />
+    <EntitySet Name="Client1" EntityType="Self.Client1" />
+    <EntitySet Name="ElementsTariff1" EntityType="Self.ElementsTariff1" />
+    <EntitySet Name="HistoryTariff1" EntityType="Self.HistoryTariff1" />
+    <EntitySet Name="LegalEntity1" EntityType="Self.LegalEntity1" />
+    <EntitySet Name="Person1" EntityType="Self.Person1" />
+    <EntitySet Name="Tariff1" EntityType="Self.Tariff1" />
+    <EntitySet Name="Worker1" EntityType="Self.Worker1" />
+  </EntityContainer>
+</Schema>

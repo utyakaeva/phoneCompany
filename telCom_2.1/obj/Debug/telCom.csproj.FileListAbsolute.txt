@@ -1,0 +1,16 @@
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Debug\telCom_2.1.exe.config
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Debug\telCom_2.1.exe
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Debug\telCom_2.1.pdb
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Debug\EntityFramework.dll
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Debug\EntityFramework.xml
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom_2._1.Properties.Resources.resources
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom_2.1.exe
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom_2.1.pdb
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom_2._1.connectionForm.resources
+c:\users\user\documents\visual studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom_2._1.LoginForm.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom_2._1.WorkerMainForm.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Debug\telCom_2._1.ClientMainForm.resources

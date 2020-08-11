@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище telComModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Balance1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="DateEvent" Type="datetime" />
+    <Property Name="Summa" Type="float" />
+    <Property Name="TextEvent" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Call1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityFromId" Type="int" />
+    <Property Name="CityToId" Type="int" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="CostCall" Type="float" />
+    <Property Name="DateStartCall" Type="datetime" />
+    <Property Name="DateEndCall" Type="datetime" />
+    <Property Name="Duration" Type="int" />
+  </EntityType>
+  <EntityType Name="City1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Client1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="Balance" Type="float" Nullable="false" />
+    <Property Name="LegalEntityId" Type="int" />
+    <Property Name="Login" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Position" Type="varchar" MaxLength="100" />
+    <Property Name="TariffId" Type="int" />
+  </EntityType>
+  <EntityType Name="ElementsTariff1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TariffId" Type="int" />
+    <Property Name="CityFromId" Type="int" />
+    <Property Name="CityToId" Type="int" />
+    <Property Name="CostCall" Type="float" />
+  </EntityType>
+  <EntityType Name="HistoryTariff1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TariffId" Type="int" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="ChangeDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LegalEntity1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AddressCompany" Type="varchar" MaxLength="150" />
+    <Property Name="Bik" Type="varchar" MaxLength="20" />
+    <Property Name="Inn" Type="varchar" MaxLength="12" />
+    <Property Name="CoressAccount" Type="int" />
+    <Property Name="FaceCharge" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Person1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIO" Type="varchar" MaxLength="200" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tariff1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+    <Property Name="TimeOfDay" Type="bit" />
+  </EntityType>
+  <EntityType Name="Worker1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccessCode" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="Login" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Position" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="Хранилище telComModelContainer">
+    <EntitySet Name="Balance1" EntityType="Self.Balance1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Call1" EntityType="Self.Call1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City1" EntityType="Self.City1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client1" EntityType="Self.Client1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ElementsTariff1" EntityType="Self.ElementsTariff1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoryTariff1" EntityType="Self.HistoryTariff1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LegalEntity1" EntityType="Self.LegalEntity1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person1" EntityType="Self.Person1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tariff1" EntityType="Self.Tariff1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Worker1" EntityType="Self.Worker1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

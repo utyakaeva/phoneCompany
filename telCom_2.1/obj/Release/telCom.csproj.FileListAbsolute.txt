@@ -1,0 +1,16 @@
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Release\telCom_2.1.exe.config
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom_2._1.connectionForm.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom_2._1.ClientMainForm.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom_2._1.WorkerMainForm.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom_2._1.LoginForm.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom_2._1.Properties.Resources.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom.csproj.GenerateResource.Cache
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Release\telCom_2.1.exe
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Release\telCom_2.1.pdb
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Release\EntityFramework.dll
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Release\EntityFramework.xml
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom_2.1.exe
+C:\Users\USER\Documents\Visual Studio 2015\Projects\telCom_2.1\telCom_2.1\obj\Release\telCom_2.1.pdb

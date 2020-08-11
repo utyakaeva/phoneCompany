@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище telComModelContainer" CdmEntityContainer="telComEntities">
+    <EntitySetMapping Name="Balance1">
+      <EntityTypeMapping TypeName="telComModel.Balance1">
+        <MappingFragment StoreEntitySet="Balance1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="DateEvent" ColumnName="DateEvent" />
+          <ScalarProperty Name="Summa" ColumnName="Summa" />
+          <ScalarProperty Name="TextEvent" ColumnName="TextEvent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Call1">
+      <EntityTypeMapping TypeName="telComModel.Call1">
+        <MappingFragment StoreEntitySet="Call1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CityFromId" ColumnName="CityFromId" />
+          <ScalarProperty Name="CityToId" ColumnName="CityToId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="CostCall" ColumnName="CostCall" />
+          <ScalarProperty Name="DateStartCall" ColumnName="DateStartCall" />
+          <ScalarProperty Name="DateEndCall" ColumnName="DateEndCall" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="City1">
+      <EntityTypeMapping TypeName="telComModel.City1">
+        <MappingFragment StoreEntitySet="City1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client1">
+      <EntityTypeMapping TypeName="telComModel.Client1">
+        <MappingFragment StoreEntitySet="Client1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="LegalEntityId" ColumnName="LegalEntityId" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="TariffId" ColumnName="TariffId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ElementsTariff1">
+      <EntityTypeMapping TypeName="telComModel.ElementsTariff1">
+        <MappingFragment StoreEntitySet="ElementsTariff1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TariffId" ColumnName="TariffId" />
+          <ScalarProperty Name="CityFromId" ColumnName="CityFromId" />
+          <ScalarProperty Name="CityToId" ColumnName="CityToId" />
+          <ScalarProperty Name="CostCall" ColumnName="CostCall" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistoryTariff1">
+      <EntityTypeMapping TypeName="telComModel.HistoryTariff1">
+        <MappingFragment StoreEntitySet="HistoryTariff1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TariffId" ColumnName="TariffId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LegalEntity1">
+      <EntityTypeMapping TypeName="telComModel.LegalEntity1">
+        <MappingFragment StoreEntitySet="LegalEntity1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddressCompany" ColumnName="AddressCompany" />
+          <ScalarProperty Name="Bik" ColumnName="Bik" />
+          <ScalarProperty Name="Inn" ColumnName="Inn" />
+          <ScalarProperty Name="CoressAccount" ColumnName="CoressAccount" />
+          <ScalarProperty Name="FaceCharge" ColumnName="FaceCharge" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person1">
+      <EntityTypeMapping TypeName="telComModel.Person1">
+        <MappingFragment StoreEntitySet="Person1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tariff1">
+      <EntityTypeMapping TypeName="telComModel.Tariff1">
+        <MappingFragment StoreEntitySet="Tariff1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TimeOfDay" ColumnName="TimeOfDay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Worker1">
+      <EntityTypeMapping TypeName="telComModel.Worker1">
+        <MappingFragment StoreEntitySet="Worker1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccessCode" ColumnName="AccessCode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

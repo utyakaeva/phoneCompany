@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище telComModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Balance1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientId" Type="int" />
+          <Property Name="DateEvent" Type="datetime" />
+          <Property Name="Summa" Type="float" />
+          <Property Name="TextEvent" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Call1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityFromId" Type="int" />
+          <Property Name="CityToId" Type="int" />
+          <Property Name="ClientId" Type="int" />
+          <Property Name="CostCall" Type="float" />
+          <Property Name="DateStartCall" Type="datetime" />
+          <Property Name="DateEndCall" Type="datetime" />
+          <Property Name="Duration" Type="int" />
+        </EntityType>
+        <EntityType Name="City1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Client1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="Balance" Type="float" Nullable="false" />
+          <Property Name="LegalEntityId" Type="int" />
+          <Property Name="Login" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Position" Type="varchar" MaxLength="100" />
+          <Property Name="TariffId" Type="int" />
+        </EntityType>
+        <EntityType Name="ElementsTariff1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TariffId" Type="int" />
+          <Property Name="CityFromId" Type="int" />
+          <Property Name="CityToId" Type="int" />
+          <Property Name="CostCall" Type="float" />
+        </EntityType>
+        <EntityType Name="HistoryTariff1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TariffId" Type="int" />
+          <Property Name="ClientId" Type="int" />
+          <Property Name="ChangeDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="LegalEntity1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AddressCompany" Type="varchar" MaxLength="150" />
+          <Property Name="Bik" Type="varchar" MaxLength="20" />
+          <Property Name="Inn" Type="varchar" MaxLength="12" />
+          <Property Name="CoressAccount" Type="int" />
+          <Property Name="FaceCharge" Type="varchar" MaxLength="100" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Person1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIO" Type="varchar" MaxLength="200" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="Tariff1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="150" />
+          <Property Name="TimeOfDay" Type="bit" />
+        </EntityType>
+        <EntityType Name="Worker1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccessCode" Type="int" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="Login" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Position" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="Хранилище telComModelContainer">
+          <EntitySet Name="Balance1" EntityType="Self.Balance1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Call1" EntityType="Self.Call1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="City1" EntityType="Self.City1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Client1" EntityType="Self.Client1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ElementsTariff1" EntityType="Self.ElementsTariff1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HistoryTariff1" EntityType="Self.HistoryTariff1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LegalEntity1" EntityType="Self.LegalEntity1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person1" EntityType="Self.Person1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tariff1" EntityType="Self.Tariff1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Worker1" EntityType="Self.Worker1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="telComModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Balance1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="Int32" />
+          <Property Name="DateEvent" Type="DateTime" Precision="3" />
+          <Property Name="Summa" Type="Double" />
+          <Property Name="TextEvent" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Call1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityFromId" Type="Int32" />
+          <Property Name="CityToId" Type="Int32" />
+          <Property Name="ClientId" Type="Int32" />
+          <Property Name="CostCall" Type="Double" />
+          <Property Name="DateStartCall" Type="DateTime" Precision="3" />
+          <Property Name="DateEndCall" Type="DateTime" Precision="3" />
+          <Property Name="Duration" Type="Int32" />
+        </EntityType>
+        <EntityType Name="City1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Client1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Balance" Type="Double" Nullable="false" />
+          <Property Name="LegalEntityId" Type="Int32" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TariffId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ElementsTariff1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TariffId" Type="Int32" />
+          <Property Name="CityFromId" Type="Int32" />
+          <Property Name="CityToId" Type="Int32" />
+          <Property Name="CostCall" Type="Double" />
+        </EntityType>
+        <EntityType Name="HistoryTariff1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TariffId" Type="Int32" />
+          <Property Name="ClientId" Type="Int32" />
+          <Property Name="ChangeDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="LegalEntity1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AddressCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Bik" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Inn" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CoressAccount" Type="Int32" />
+          <Property Name="FaceCharge" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Person1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Tariff1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="TimeOfDay" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Worker1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccessCode" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="telComEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Balance1" EntityType="Self.Balance1" />
+          <EntitySet Name="Call1" EntityType="Self.Call1" />
+          <EntitySet Name="City1" EntityType="Self.City1" />
+          <EntitySet Name="Client1" EntityType="Self.Client1" />
+          <EntitySet Name="ElementsTariff1" EntityType="Self.ElementsTariff1" />
+          <EntitySet Name="HistoryTariff1" EntityType="Self.HistoryTariff1" />
+          <EntitySet Name="LegalEntity1" EntityType="Self.LegalEntity1" />
+          <EntitySet Name="Person1" EntityType="Self.Person1" />
+          <EntitySet Name="Tariff1" EntityType="Self.Tariff1" />
+          <EntitySet Name="Worker1" EntityType="Self.Worker1" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище telComModelContainer" CdmEntityContainer="telComEntities">
+          <EntitySetMapping Name="Balance1">
+            <EntityTypeMapping TypeName="telComModel.Balance1">
+              <MappingFragment StoreEntitySet="Balance1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="DateEvent" ColumnName="DateEvent" />
+                <ScalarProperty Name="Summa" ColumnName="Summa" />
+                <ScalarProperty Name="TextEvent" ColumnName="TextEvent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Call1">
+            <EntityTypeMapping TypeName="telComModel.Call1">
+              <MappingFragment StoreEntitySet="Call1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CityFromId" ColumnName="CityFromId" />
+                <ScalarProperty Name="CityToId" ColumnName="CityToId" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="CostCall" ColumnName="CostCall" />
+                <ScalarProperty Name="DateStartCall" ColumnName="DateStartCall" />
+                <ScalarProperty Name="DateEndCall" ColumnName="DateEndCall" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="City1">
+            <EntityTypeMapping TypeName="telComModel.City1">
+              <MappingFragment StoreEntitySet="City1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Client1">
+            <EntityTypeMapping TypeName="telComModel.Client1">
+              <MappingFragment StoreEntitySet="Client1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="LegalEntityId" ColumnName="LegalEntityId" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="TariffId" ColumnName="TariffId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ElementsTariff1">
+            <EntityTypeMapping TypeName="telComModel.ElementsTariff1">
+              <MappingFragment StoreEntitySet="ElementsTariff1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TariffId" ColumnName="TariffId" />
+                <ScalarProperty Name="CityFromId" ColumnName="CityFromId" />
+                <ScalarProperty Name="CityToId" ColumnName="CityToId" />
+                <ScalarProperty Name="CostCall" ColumnName="CostCall" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HistoryTariff1">
+            <EntityTypeMapping TypeName="telComModel.HistoryTariff1">
+              <MappingFragment StoreEntitySet="HistoryTariff1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TariffId" ColumnName="TariffId" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LegalEntity1">
+            <EntityTypeMapping TypeName="telComModel.LegalEntity1">
+              <MappingFragment StoreEntitySet="LegalEntity1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AddressCompany" ColumnName="AddressCompany" />
+                <ScalarProperty Name="Bik" ColumnName="Bik" />
+                <ScalarProperty Name="Inn" ColumnName="Inn" />
+                <ScalarProperty Name="CoressAccount" ColumnName="CoressAccount" />
+                <ScalarProperty Name="FaceCharge" ColumnName="FaceCharge" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person1">
+            <EntityTypeMapping TypeName="telComModel.Person1">
+              <MappingFragment StoreEntitySet="Person1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tariff1">
+            <EntityTypeMapping TypeName="telComModel.Tariff1">
+              <MappingFragment StoreEntitySet="Tariff1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TimeOfDay" ColumnName="TimeOfDay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Worker1">
+            <EntityTypeMapping TypeName="telComModel.Worker1">
+              <MappingFragment StoreEntitySet="Worker1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AccessCode" ColumnName="AccessCode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
